@@ -90,7 +90,7 @@
   #skill .wrap ul li::before{
   width: calc(150px * 0.7) !important;
   height: calc(150px * 0.7) !important;
-  transform: translateX(-9px);
+  transform: translateX(-7px);
   }
   #skill .wrap ul li:nth-child(1)::before{
     
