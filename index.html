@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민솔 개인포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/ham.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Gowun+Batang&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 구글폰트2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Gowun+Batang&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- aos -->
+    <link rel="stylesheet" href="aos/aos.css">
+    <script src="aos/aos.js"></script>
+    <!-- script -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.marquee.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- <script type="text/javascript">
+        $(document).ready(function(){
+          $('.marquee-wrap').marquee();
+      });
+    </script> -->
+    <script>
+        $(document).ready(function(){
+            $('.port').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 3,
+                centerMode: true,
+                centerPadding: '100px',
+                autoplay: true,
+                autoplaySpeed: 5000
+            });   
+        });    
+        $(document).ready(function(){
+            $('.slick-slider').slick({
+                responsive: [
+                {
+                    breakpoint: 768,  // 화면 너비가 768px 이하일 때
+                    settings: {
+                    slidesToShow: 1,  // 모바일에서는 한 번에 1개 슬라이드 보여주기
+                    slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1024,  // 화면 너비가 1024px 이하일 때
+                    settings: {
+                    slidesToShow: 2,  // 태블릿에서는 한 번에 2개 슬라이드 보여주기
+                    slidesToScroll: 1
+                    }
+                }
+                ]
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            if($(window).width()<769){ 
+                $("header nav > ul > li").off("mouseenter mouseleave"); //모바일에서 대메뉴에 있는 이벤트 없애기
+                $("header nav").append('<div class="mobileMenu"></div>');
+
+                // 클래스member를 .mobileMenu로 이동시켜라
+                $("header nav ul").appendTo(".mobileMenu");
+                // ham클릭시 메뉴등장
+                $(".ham").click(function(){
+                        $(".mobileMenu").toggleClass("mobileMenuShow");
+                        return false;
+                });
+            }
+            $(window).resize(function () {
+                console.log("Resize detected");
+
+                if ($(window).width() <= 768) {
+                    console.log("Switching to mobile view");
+                    if (!$(".mobileMenu").length) {
+                        console.log("Adding .mobileMenu");
+                        $("header nav").append('<div class="mobileMenu"></div>');
+                    }
+                    $("header nav ul").appendTo(".mobileMenu");
+
+                    $(".ham").off("click");
+                    $(".ham").on("click",function(){
+                        $(".mobileMenu").toggleClass("mobileMenuShow");
+                        return false;
+                    });
+
+                    console.log("Moved ul to .mobileMenu");
+                } else {
+                    console.log("Switching to desktop view");
+                    if ($(".mobileMenu").length) {
+                        $("header nav ul").appendTo("header nav");
+                        $(".mobileMenu").remove();
+                        console.log(".mobileMenu removed");
+                    }
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <!-- 상단영역 -->
+    <header>
+        <nav>
+            <h1><a href=""></a></h1>
+            <ul>
+                <li><a href="">ABOUT ME</a></li>
+                <li><a href="">SKILL</a></li>
+                <li><a href="">PORTFOLIO</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+            <a href="" class="ham">메뉴보기</a>
+        </nav>
+    </header>
+    <!-- 타이틀영역 -->
+     <div id="title">
+        <div class="wrap">
+        <h2 class="font">Dreaming of becoming a Web Publisher。<span class="block"></span><span>안녕하세요! 김민솔입니다.</span></h2>
+        </div>
+     </div>
+    <!-- 메인영역 -->
+     <main>
+        <section id="about">
+            <div class="wrap">
+                <div class="marquee">ABOUT ME</div>
+                <h2>저는 웹퍼블리셔의 꿈을 가지고 있는 김민솔입니다.
+                    <p>계속해서 배우는 웹퍼블리셔가 되겠습니다.</p>
+                </h2>
+                <ul>
+                    <li>
+                        <h3 class="h5T">EDUCATION</h3>
+                        <div class="p1">
+                            <p>2021 │ 성남 성남여자고등학교 졸업</p>
+                            <p>2021~ │ 서울 서경대학교 경영학부 재학</p>
+                            <p>2024 .09 ~ │ 모란 이젠아카데미(UIUX 웹디자인& 유튜브영상 반응형) 수료 예정</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="h5T">HOBBY</h3>
+                        <div class="p1">
+                            <a href="https://blog.naver.com/rlaalsthf56" class="b1" target="_blank">
+                                <p class="b1">블로그 작성</p>
+                            </a>
+                            <a href="https://www.ktwiz.co.kr/" class="b2" target="_blank">
+                                <p class="b2">야구 시청</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>    
+        </section>
+        <section id="skill">
+            <div class="wrap">
+                <h2 class="h3T">SKILL</h2>
+                <ul>
+                    <li>
+                        <h3>PHOTOSHOP</h3>
+                    </li>
+                    <li>
+                        <h3>ILLSTRATOR</h3>
+                    </li>
+                    <li>
+                        <h3>HTML</h3>
+                    </li>
+                    <li>
+                        <h3>CSS</h3>
+                    </li>
+                    <li>
+                        <h3>JAVASCRIPT</h3>
+                    </li>
+                    <li>
+                        <h3>JQUERY</h3>
+                    </li>
+                    <li>
+                        <h3>SASS</h3>
+                    </li>
+                    <li>
+                        <h3>EMMET(JEN CORDING)</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="wrap">
+                <h2 class="h3T">PORTFOLIO</h2>
+                <ul class="port">
+                    <li><a href="file:///D:/%EA%B9%80%EB%AF%BC%EC%86%94/%EC%BD%94%EB%94%A9%EC%9E%91%EC%97%85%EB%AC%BC/mypf1/index.html" class="p1" target="_blank">
+                        <div class="m1">
+                            <h3>BIANGLO</h3>
+                            <p>HTML,CSS,반응형</p>
+                        </div>
+                    </a></li>
+                    <li><a href="file:///D:/%EA%B9%80%EB%AF%BC%EC%86%94/%EC%BD%94%EB%94%A9%EC%9E%91%EC%97%85%EB%AC%BC/PF01-%EB%85%B8%EB%9E%91%ED%92%8D%EC%84%A0(ybtour.co.kr)%E2%94%82%EB%B0%98%EC%9D%91%ED%98%95%20%EB%94%94%EC%9E%90%EC%9D%B8/pf1%20(2)/index.html" class="p2" target="_blank">
+                        <div class="m1">
+                            <h3>노랑풍선</h3>
+                            <p>HTML,CSS,반응형</p>
+                        </div>
+                    </a></li>
+                    <li><a href="file:///D:/%EA%B9%80%EB%AF%BC%EC%86%94/%EC%BD%94%EB%94%A9%EC%9E%91%EC%97%85%EB%AC%BC/pf2%20%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8/index.html" class="p3" target="_blank">
+                        <div class="m1">
+                            <h3>카페베네 (RE-DESIGN)</h3>
+                            <p>HTML,CSS,JAVASCRIPT</p>
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- 하단영역 -->
+     <footer>
+        <div class="wrap">
+            <h2 class="hide">contact</h2>
+            <h3>image</h3>
+            <ul>
+                <li class="l1">
+                    <h4>CONTACT ME</h4>
+                    <p>열심히 하겠습니다!</p>
+                </li>
+            </ul>
+            <ul>
+                <li class="l2">NAME: <span>김민솔</span><br>CALL: <span>010-5314-3135</span><br>EMAIL: <span>rlaalsthf56@gmail.com</span></li>
+            </ul>
+            <p class="copyright">© 2024 Kim_Min_Sol. All Rights Reserved. </p>
+        </div>
+     </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  html,body{
+    height: 100%;
+    width: 100%;
+  }
+  ul{
+    list-style: none;
+  }
+  h1,h2,h3,h4,h5,h6{
+    font-size: initial;
+    font-weight: normal;
+  }
+  a{
+    text-decoration:none;
+    color:white;
+    /*! font-size: 17px; */
+/*     font-weight: bold; */
+  }
+  .counter-container {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+  .counter {
+    font-size: 3rem;
+  }

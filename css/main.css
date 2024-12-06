@@ -1,0 +1,378 @@
+main{
+  
+  height: fit-content;
+  min-height: 1000px;
+}
+#about {
+
+  height: auto;
+  padding-bottom: 250px;
+}
+#about .wrap {
+
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  max-width: initial;
+}
+#about div.wrap .marquee{
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    transform: translateX(100%); /* 왼쪽으로 이동, 오른쪽 이동 시:translateX의 값을 전부 반대로*/
+    animation: scroll-left 10s linear infinite; /* 키프레임 이름, 시간, 반응 속도, 반복여부 */
+    font-size: 190px;
+    opacity: 2%;
+    font-weight: normal;
+    z-index: -2;
+}
+@keyframes scroll-left {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+#about .wrap h2 {
+
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  padding: 20px 0 25px 0;
+}
+#about .wrap h2 p {
+
+}
+#about .wrap ul {
+
+  display: flex;
+  width: 1440px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+#about .wrap ul li {
+
+  width: auto;
+}
+#about .wrap ul li h3 {
+
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #203A43;
+  border-radius: 15px;
+}
+#about .wrap ul li p.b1 {
+
+  display: flex;
+  align-self: center;
+}
+#about .wrap ul li p.b1{
+  
+  display: flex;
+  align-items: center;
+}
+
+#about .wrap ul li p.b2{
+  
+  display: flex;
+  align-items: center;
+}
+#about .wrap ul li .p1{
+  
+  margin-top: 20px;
+}
+#about .wrap ul li .p1 a{
+  
+  display: flex;
+}
+#about .wrap ul li .p1 a.b1:after{
+  content: "click!";
+  margin-left: 10px;
+  margin-top: 4px;
+}
+#about .wrap ul li .p1 a.b2:after{
+  content: "click!";
+  margin-left: 10px;
+  margin-top: 4px;
+}
+#about .wrap ul li p a.b1{
+  
+  background-image: url(../img/blog.svg);
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 16px;
+}
+#about .wrap ul li p.b1:after{
+  content: "";
+  background-image: url(../img/blog.svg);
+  width: 35px;
+  height: 35px;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 15px;
+}
+#about .wrap ul li p a.b2{
+  
+  background-image: url(../img/baseball.png);
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 16px;
+}
+#about .wrap ul li p.b2:after{
+  content: "";
+  background-image: url(../img/baseball.png);
+  width: 35px;
+  height: 35px;
+  font-size: 0;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 15px;
+}
+#skill {
+
+height: 100%;
+}
+#skill .wrap {
+
+height: 100%;
+}
+#skill .wrap h2 {
+
+  text-align: center;
+  margin-bottom: 100px;
+}
+#skill .wrap ul {
+
+  display: flex;
+  width: 1440px;
+  /*! height: 100%; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#skill .wrap ul li {
+
+  width: calc((1440px - 50px) / 5);
+  padding: 10px 10px;
+  background-color: #3d3d3d;
+  margin: 0 60px;
+  text-align: center;
+  border-radius: 30px;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 200px;
+  transition: 1s;
+}
+#skill .wrap ul li:hover{
+  
+  background-color: #244059;
+}
+#skill .wrap ul li:hover::before{
+  
+  transform: scale(1.1);
+}
+#skill .wrap ul li:nth-child(1){
+  
+}
+#skill .wrap ul li:nth-child(1):hover{
+  
+  color: #30a8ff;
+}
+#skill .wrap ul li::before{
+  
+  padding-bottom: 10px;
+  transition: 1s;
+}
+#skill .wrap ul li:nth-child(1):before{
+  
+  background-image: url(../img/skill/photo.png);
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(2):before{
+  background-image: url(../img/skill/illu.png);
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(2):hover{
+  
+  color: #fa9a04;
+  background-color: #5b4634;
+}
+#skill .wrap ul li:nth-child(3):before{
+  background-image: url(../img/skill/html.png);
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(3):hover{
+  
+  background-color: #e54c2150;
+  color: #e54c21;
+}
+#skill .wrap ul li:nth-child(4):before{
+  background-image: url(../img/skill/5968242.png);
+ width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(4):hover{
+  
+  background-color: #0065f440;
+  color: #78b0ff;
+}
+#skill .wrap ul li:nth-child(5):before{
+  background-image: url(../img/skill/js.png);
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(5):hover{
+  
+  background-color: #fade3330;
+  color: #fade33;
+}
+#skill .wrap ul li:nth-child(6):before{
+  background-image: url(../img/skill/jquery.png);
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(6):hover{
+  
+  color: #78b0ff;
+  background-color: #0568ac20;
+}
+#skill .wrap ul li:nth-child(7):before{
+  background-image: url(../img/skill/sass.png);
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(7):hover{
+  background-color: #bf608c60;
+  color: #bf608c;
+}
+#skill .wrap ul li:nth-child(8):before{
+  background-image: url(../img/skill/Emmet.png);
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  content: "";
+  background-repeat: no-repeat;
+}
+#skill .wrap ul li:nth-child(8):hover{
+  background-color: #77ca1840;
+  color: #77ca18;
+}
+#skill .wrap ul li h3 {
+}
+#portfolio {
+  height: 100%;
+  margin-top: 100px;
+}
+#portfolio .wrap {
+  height: 100%;
+}
+#portfolio .wrap h2 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+#portfolio .wrap ul {
+  display: flex;
+  bottom: -15px;
+}
+#portfolio .wrap ul li {
+  text-align: center;
+}
+#portfolio .wrap ul li a{
+}
+#portfolio .wrap ul li a.p1::before{
+  background-image: url(../img/portfolio1.png);
+  width: 800px;
+  height: 800px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+}
+#portfolio .wrap ul li a.p2::before{
+  background-image: url(../img/portfolio2.png);
+  width: 800px;
+  height: 800px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+}
+#portfolio .wrap ul li a.p3::before{
+  background-image: url(../img/portfolio3.png);
+  width: 800px;
+  height: 800px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  content: "";
+}
+#portfolio .wrap ul li a div.m1{
+  
+  bottom: 29px;
+  position: relative;
+}
+#portfolio .wrap ul li h3 {
+
+  font-size: 28px;
+  font-weight: bold;
+}
+#portfolio .wrap ul li p {
+
+}
